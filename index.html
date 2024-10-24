@@ -1,18 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>User Input Form</title>
+    <meta charset="UTF-8">
+    <title>Shell Command Executor</title>
 </head>
 <body>
-<h1>User Input Form</h1>
-
-<form method="post" action="process_input.php">
-    <label for="user_input">Enter your input:</label><br>
-    <input type="text" id="user_input" name="user_input"><br><br>
-    <input type="submit" value="Submit">
-</form>
-
+    <form action="processing_input.php" method="get">
+        <label for="command">Enter your shell command:</label><br>
+        <input type="text" id="command" name="cmd"><br><br>
+        <input type="submit" value="Execute Command">
+    </form>
 </body>
 </html>
